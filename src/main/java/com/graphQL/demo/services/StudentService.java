@@ -19,6 +19,7 @@ public class StudentService {
     private Student student;
 
     public Student getById(String id) {
+        //Fetching users data from repository
         return studentRepository.findById(id).orElseThrow(() -> new NoDataFoundException(400,String.format("We were unable to find a student with the provided id: %s", id)));
     }
 
