@@ -16,6 +16,7 @@ import lombok.RequiredArgsConstructor;
 public class StudentService {
 
     private final StudentRepository studentRepository;
+    
     private Student student;
 
     public Student getById(String id) {
