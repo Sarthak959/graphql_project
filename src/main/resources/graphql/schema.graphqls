@@ -1,0 +1,26 @@
+type Query{
+    getStudent(id:String):Student
+    getAllStudents:[Student]
+}
+
+type Student{
+    id:String
+    name:String
+    sirname:String
+    percentage:Int
+}
+
+type Mutation{
+    createStudent(dto:StudentDto):Student
+    updateStudent(id:String, dto:StudentDto): Student
+    deleteStudent(id: String): String
+}
+
+input StudentDto{
+    name:String
+    sirname:String
+    percentage:Int
+}
+
+
+
